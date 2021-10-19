@@ -44,15 +44,18 @@ const App = () => {
             deposit: Yup
             .number()
             .required('Obligatorio')
-            .typeError('Debe ser un número.'),
+            .typeError('Debe ser un número.')
+            .min(0, 'El valor mínimo es 0.'),
             contribution: Yup
             .number()
             .required('Obligatorio')
-            .typeError('Debe ser un número.'),
+            .typeError('Debe ser un número.')
+            .min(0, 'El valor mínimo es 0.'),
             years: Yup
             .number()
             .required('Obligatorio')
-            .typeError('Debe ser un número.'),
+            .typeError('Debe ser un número.')
+            .min(0, 'El valor mínimo es 0.'),
             rate: Yup
             .number()
             .required('Obligatorio')
